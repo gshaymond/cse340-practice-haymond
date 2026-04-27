@@ -1,0 +1,29 @@
+{
+  "name": "cse340-practice-haymond",
+  "version": "1.0.0",
+  "description": "Practice project for CSE 340",
+  "homepage": "https://github.com/gshaymond/cse340-practice-haymond#readme",
+  "bugs": {
+    "url": "https://github.com/gshaymond/cse340-practice-haymond/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gshaymond/cse340-practice-haymond.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "restore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --env-file=.env server.js",
+    "start": "node server.js"
+
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
