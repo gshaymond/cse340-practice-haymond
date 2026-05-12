@@ -1,0 +1,57 @@
+<%- include('../partials/header') %>
+<main class="error-container error-500">
+    <div class="error-content">
+        <div class="error-symbol">
+            <span class="error-icon">⚠️</span>
+        </div>
+        
+        <div class="error-info">
+            <h1 class="error-title"><%= title %></h1>
+            <p class="error-status">Error Code: <%= status %></p>
+            
+            <p class="error-description">
+                We're experiencing technical difficulties with your request. 
+                Our team has been notified and is working to resolve this issue as quickly as possible.
+            </p>
+
+            <% if (NODE_ENV !== 'production') { %>
+                <div class="error-message">
+                    <strong>Error Details:</strong>
+                    <p><%= error %></p>
+                </div>
+            <% } %>
+            
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary">Return to Homepage</a>
+                <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+            </div>
+            
+            <div class="error-suggestions">
+                <h3>What You Can Try:</h3>
+                <ul>
+                    <li>Refresh the page to retry your request</li>
+                    <li>Check that you're connected to the internet</li>
+                    <li>Clear your browser cache and cookies</li>
+                    <li>Return to the <a href="/">homepage</a> and try again</li>
+                    <li>Contact support if the problem persists</li>
+                </ul>
+            </div>
+
+            <% if (NODE_ENV === 'development') { %>
+                <details class="error-details" open>
+                    <summary>Error Details (Development Only)</summary>
+                    <div class="debug-info">
+                        <p><strong>Error Message:</strong></p>
+                        <pre><%= error %></pre>
+                        <p><strong>Stack Trace:</strong></p>
+                        <pre><%= stack %></pre>
+                        <p><strong>URL:</strong> <%= url %></p>
+                        <p><strong>Timestamp:</strong> <%= timestamp %></p>
+                        <p><strong>Status:</strong> <%= status %></p>
+                    </div>
+                </details>
+            <% } %>
+        </div>
+    </div>
+</main>
+<%- include('../partials/footer') %>
