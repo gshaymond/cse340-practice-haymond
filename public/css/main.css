@@ -12,6 +12,15 @@ body {
     min-height: 100vh;
 }
 
+/* Theme background variants applied via body class */
+body.blue-theme { background-color: #e3f2fd; }
+body.green-theme { background-color: #e8f5e8; }
+body.red-theme { background-color: #ffebee; }
+body.purple-theme { background-color: #f3e5f5; }
+body.sunset-theme { background-image: linear-gradient(135deg, #ffe0b2, #ffccbc); }
+body.mint-theme { background-color: #e8f7ef; }
+body.yellow-theme { background-color: #fffde7; }
+
 /* ============================================================
    NAVIGATION STYLES
    ============================================================ */
