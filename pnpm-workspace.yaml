@@ -1,4 +1,4 @@
 allowBuilds:
   bcrypt: true
   esbuild: true
-  @nestjs/core: true
+  # @nestjs/core: true
